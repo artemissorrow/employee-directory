@@ -6,7 +6,7 @@ import API from '../utils/API'
 class Table extends React.Component {
   state = {
     employees: [],
-    search: null
+    search: null,
   }
 
   componentDidMount () {
@@ -26,9 +26,9 @@ class Table extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className='container bg-dark p-2'>
         <Filter event={e => this.searchSpace(e)} />
-        <table className='table'>
+        <table className='table table-dark table-striped'>
           <thead>
             <tr>
               <th scope='col'>Photo</th>

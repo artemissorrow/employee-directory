@@ -6,12 +6,12 @@ function Filter(props) {
       <input
         className='form-control me-2'
         type='search'
-        placeholder='Search'
-        aria-label='Search'
+        placeholder='Filter by First or Last Name'
+        aria-label='Filter'
         onChange={props.event}
       />
-      <button className='btn btn-outline-success' type='submit'>
-        Search
+      <button className='btn btn-secondary' type='submit'>
+        Filter
       </button>
     </form>
   )
