@@ -6,7 +6,8 @@ import API from '../utils/API'
 class Table extends React.Component {
   state = {
     employees: [],
-    search: null,
+    search: null
+    // sort: []
   }
 
   componentDidMount () {
@@ -24,6 +25,42 @@ class Table extends React.Component {
     this.setState({ search: keyword })
   }
 
+  sortFirst = () => {
+    this.setState(
+      this.state.employees.sort((a, b) => {
+        let nameA = a.name.first.toLowerCase()
+        let nameB = b.name.first.toLowerCase()
+
+        if (nameA < nameB) {
+          return -1
+        }
+        if (nameA > nameB) {
+          return 1
+        }
+
+        return 0
+      })
+    )
+  }
+
+  sortLast = () => {
+    this.setState(
+      this.state.employees.sort((a, b) => {
+        let nameA = a.name.last.toLowerCase()
+        let nameB = b.name.last.toLowerCase()
+
+        if (nameA < nameB) {
+          return -1
+        }
+        if (nameA > nameB) {
+          return 1
+        }
+
+        return 0
+      })
+    )
+  }
+
   render () {
     return (
       <div className='container bg-dark p-2'>
@@ -32,8 +69,18 @@ class Table extends React.Component {
           <thead>
             <tr>
               <th scope='col'>Photo</th>
-              <th scope='col'>First Name</th>
-              <th scope='col'>Last Name</th>
+              <th scope='col'>
+                First Name{' '}
+                <button onClick={this.sortFirst} className='btn btn-secondary btn-sm'>
+                  <i className='fas fa-sort'></i>
+                </button>
+              </th>
+              <th scope='col'>
+                Last Name{' '}
+                <button onClick={this.sortLast} className='btn btn-secondary btn-sm'>
+                  <i className='fas fa-sort'></i>
+                </button>
+              </th>
               <th scope='col'>Email</th>
               <th scope='col'>Phone</th>
             </tr>
