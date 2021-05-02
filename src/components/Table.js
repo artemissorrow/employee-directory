@@ -7,7 +7,6 @@ class Table extends React.Component {
   state = {
     employees: [],
     search: null
-    // sort: []
   }
 
   componentDidMount () {
@@ -52,7 +51,7 @@ class Table extends React.Component {
         if (nameA < nameB) {
           return -1
         }
-        if (nameA > nameB) {
+        else if (nameA > nameB) {
           return 1
         }
 
