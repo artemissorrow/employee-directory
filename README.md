@@ -13,9 +13,10 @@ Built from scratch on an automatically generated base and file structure generat
 ## Challenges
 It definitely took some experimentation to figure out how to best structure the components and put them together. Bootstrap was super valuable for keeping layout neat and clean and quick and easy, and using props still kind of feels like magic.  
   
-Figuring out the sort function was probably the most difficult part of the whole application--there seem to be a hundred different libraries and frameworks for building tables in React, making it tricky to hunt down resources that don't use these. [This article](https://www.florin-pop.com/blog/2019/07/sort-table-data-with-react/) was extremely helpful, even though the functionality used here is stripped way down.
+Figuring out the sort function was probably the most difficult part of the whole application--there seem to be a hundred different libraries and frameworks for building tables in React, making it tricky to hunt down resources that don't use these. 
 
 ## Link and Screenshots
+[Link to Deployed App](https://artemissorrow.github.io/employee-directory/)
 
 ![screenshot of app](./assets/directoryscreen1.jpg)
 ![screenshot showing table sorted by last name](./assets/directoryscreen2.jpg)
